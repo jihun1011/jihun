@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JiHun kim</title>
+    <style>
+    a {color: black;
+       text-decoration-line: none;}
+    .section input[id*="S"]
+        {display:none;}
+    .section .slidewrap
+        {max-width:1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: rgba(181, 197, 255, 0)}
+    .section .slidelist
+        {white-space: nowrap;
+        width: 80%;
+        height: 100%;}
+    .section .slidelist > li
+        {display:inline-block;
+        vertical-align:middle;
+        width: 120%;
+}
+    .section .slidelist > li > a
+        {display: block;
+        position: relative;}
+    .section .slidelist label
+        {position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateX(-50%);
+        padding: 50px;
+        cursor: pointer;}
+    .section .slidelist .left
+        {left: 30px;
+        background:url('img/Left.png') center center / 100% no-repeat;}
+    .section .slidelist .right
+        {right: 30px;
+        margin-right: -50px;
+        background:url('img/Right.png') center center / 100% no-repeat;}
+    .section [id="S1"]:checked ~ .slidewrap .slidelist > li{transform:translateX(0%);}
+    .section [id="S2"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-100.57%);}
+    .section [id="S3"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-201.14%);}
+    .section [id="S4"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-301.71%);}
+    .section [id="S5"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-402.28%);}
+    .section [id="S6"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-502.85%);}
+    .section [id="S7"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-603.42%);}
+    .section [id="S8"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-703.99%);}
+    .section [id="S9"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-804.56%);}
+    .section [id="S10"]:checked ~ .slidewrap .slidelist > li{transform:translateX(-905.13%);}
+    
+    table {margin-left: 12.5%;
+           width: 70%; height: 550px; border: 5px solid #ffffff00;
+           background-color: white; border-radius: 20px;
+           box-shadow:0px 0px 10px #000;}
+    td {width:40%;height: 100px;
+        background-color: rgba(35, 163, 46, 0.459);
+        text-align: center;
+        border-radius: 10px;}
+    th {line-height: 200%;}
+
+</style>
+</head>
+<body style="background-color: rgb(210, 255, 235);">
+
+ <form id="quiz-form">
+
+<div class="section">
+    <input type="radio" name="slide" id="S1" checked>
+    <input type="radio" name="slide" id="S2">
+    <input type="radio" name="slide" id="S3">
+    <input type="radio" name="slide" id="S4">
+    <input type="radio" name="slide" id="S5">
+    <input type="radio" name="slide" id="S6">
+    <input type="radio" name="slide" id="S7">
+    <input type="radio" name="slide" id="S8">
+    <input type="radio" name="slide" id="S9">
+    <input type="radio" name="slide" id="S10">
+    <div class="slidewrap">
+        <ul class="slidelist">
+            <li>
+                <a>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q1.What is the name of the library in the following picture?
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>Peabody Library<br><input type="radio" name="q1" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q1" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q1" value="Baltimore"></td>
+                        <td>Georgia Library<br><input  type="radio" name="q1" value="Georgia"></td>
+                    </tr>
+                    </table>
+                    <label for="S2" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S1" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q2.What is the movie with the library in the following picture?
+                        <br><img src="img/washington university.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>The Lord of the Rings<br><input  type="radio" name="q2" value="Rings"></td>
+                        <td>Harry Potter<br><input  type="radio" name="q2" value="Harry"></td>
+                    </tr>
+                    <tr>
+                        <td>Hairspray<br><input  type="radio" name="q2" value="Hairspray"></td>
+                        <td>Pirates of the Caribbean<br><input  type="radio" name="q2" value="Pirates"></td>
+                    </tr>
+                    </table>
+                    <label for="S3" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S2" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q3.Which university is the library in the following picture?
+                        <br><img src="img/dongsan.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>Daegu university<br><input  type="radio" name="q3" value="Daegu"></td>
+                        <td>Kyungpook university<br><input  type="radio" name="q3" value="Kyungpook"></td>
+                    </tr>
+                    <tr>
+                        <td>Yeungnam university<br><input  type="radio" name="q3" value="Yeungnam"></td>
+                        <td>Keimyung university<br><input  type="radio" name="q3" value="Keimyung"></td>
+                    </tr>
+                    </table>
+                    <label for="S4" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S3" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q4.Where is the library in the following picture?
+                        <br><img src="img/Massachusetts Institute of Technology.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>Massachusetts<br><input  type="radio" name="q4" value="Massachusetts"></td>
+                        <td>Columbia<br><input  type="radio" name="q4" value="Columbia"></td>
+                    </tr>
+                    <tr>
+                        <td>Milano<br><input  type="radio" name="q4" value="Milano"></td>
+                        <td>Vladivostok<br><input  type="radio" name="q4" value="Vladivostok"></td>
+                    </tr>
+                    </table>
+                    <label for="S5" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S4" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;">Q5.What is the drawing technique on the ceiling of the library<br>in the following picture?
+                        <br><img src="img/Austrian National Library.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>fresco<br><input  type="radio" name="q5" value="fresco"></td>
+                        <td>tempera<br><input  type="radio" name="q5" value="tempera"></td>
+                    </tr>
+                    <tr>
+                        <td>oil painting<br><input  type="radio" name="q5" value="oil"></td>
+                        <td>Mosaic<br><input  type="radio" name="q5" value="Mosaic"></td>
+                    </tr>
+                    </table>
+                    <label for="S6" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S5" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q6.
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>George Peabody Library<br><input  type="radio" name="q6" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q6" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q6" value="Baltimore"></td>
+                        <td>Baltimore Library<br><input  type="radio" name="q6" value="Baltimore"></td>
+                    </tr>
+                    </table>
+                    <label for="S7" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S6" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q7.
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>George Peabody Library<br><input  type="radio" name="q7" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q7" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q7" value="Baltimore"></td>
+                        <td>Baltimore Library<br><input  type="radio" name="q7" value="Baltimore"></td>
+                    </tr>
+                    </table>
+                    <label for="S8" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S7" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q8.
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>George Peabody Library<br><input  type="radio" name="q8" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q8" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q8" value="Baltimore"></td>
+                        <td>Baltimore Library<br><input  type="radio" name="q8" value="Baltimore"></td>
+                    </tr>
+                    </table>
+                    <label for="S9" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <label for="S8" class="left"></label>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q9.
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>George Peabody Library<br><input  type="radio" name="q9" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q9" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q9" value="Baltimore"></td>
+                        <td>Baltimore Library<br><input  type="radio" name="q9" value="Baltimore"></td>
+                    </tr>
+                    </table>
+                    <label for="S10" class="right"></label>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <table>
+                        <th colspan="4" style="text-align: center;line-height: 300%;">Q10.
+                        <br><img src="img/george peabody.jpg" style="height: 250px;;"></th>
+                    <tr>
+                        <td>George Peabody Library<br><input  type="radio" name="q10" value="George"></td>
+                        <td>Dongsan Library<br><input  type="radio" name="q10" value="Dongsan"></td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Library<br><input  type="radio" name="q10" value="Baltimore"></td>
+                        <td>Baltimore Library<br><input  type="radio" name="q10" value="Baltimore"></td>
+                    </tr>
+                    </table>
+                    <label for="S9" class="left"></label>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button type="submit">Submit Quiz</button>
+ </form>
+
+<div id="quiz-results"></div>
+
+ <script>
+    const qu = document.getElementById('quiz-form');
+    qu.addEventListener('submit', (event) => {event.preventDefault();
+
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+    const q4 = document.querySelector('input[name="q4"]:checked');
+    const q5 = document.querySelector('input[name="q5"]:checked');
+    const q6 = document.querySelector('input[name="q6"]:checked');
+    const q7 = document.querySelector('input[name="q7"]:checked');
+    const q8 = document.querySelector('input[name="q8"]:checked');
+    const q9 = document.querySelector('input[name="q9"]:checked');
+    const q10 = document.querySelector('input[name="q10"]:checked');
+
+      if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) 
+      {alert('Please answer all questions');return;}
+
+      let score = 0;
+      const incorrectResponses = [];
+
+      if (q1.value === 'George') {score++;} 
+      else {incorrectResponses.push({
+        question: 1,
+        response: q1.value,
+        correctAnswer: 'George'
+        });}
+
+     if (q2.value === 'Harry') {score++;} 
+      else {incorrectResponses.push({
+        question: 2,
+        response: q2.value,
+        correctAnswer: 'harry'
+        });}
+
+     if (q3.value === 'keimyung') {score++;} 
+      else {incorrectResponsest.push({
+        question: 3,
+        response: q3.value,
+        correctAnswer: 'Gkeimyung'
+        });}
+
+        if (q4.value === 'kmassachusetts') {score++;} 
+      else {incorrectResponses.push({
+        question: 4,
+        response: q4.value,
+        correctAnswer: 'massachusetts'
+        });}
+        
+      if (q5.value === 'George') {score++;} 
+      else {incorrectResponses.push({
+        question: 5,
+        response: q5.value,
+        correctAnswer: 'George'
+        });}
+
+        if (q6.value === 'George') {score++;} 
+      else {incorrectResponsest.push({
+        question: 6,
+        response: q6.value,
+        correctAnswer: 'George'
+        });}
+
+        if (q7.value === 'George') {score++;} 
+      else {incorrectResponsest.push({
+        question: 7,
+        response: q7.value,
+        correctAnswer: 'George'
+        });}
+
+        if (q8.value === 'George') {score++;} 
+      else {incorrectResponses.push({
+        question: 8,
+        response: q8.value,
+        correctAnswer: 'George'
+        });}
+
+        if (q9.value === 'George') {score++;} 
+      else {incorrectResponses.push({
+        question: 9,
+        response: q9.value,
+        correctAnswer: 'George'
+        });}
+
+        if (q10.value === 'George') {score++;} 
+      else {iincorrectResponses.push({
+        question: 10,
+        response: q10.value,
+        correctAnswer: 'George'
+        });}
+
+
+      const totalQuestions = 10;
+      const totalscore = score;
+      const totalincorrect = totalQuestions - score;
+      const scorePercentage = (score / totalQuestions) * 100;
+
+      let output = '<p>Results:</p>';
+      output += '<ul>';
+      incorrectResponses.forEach((response) => {
+        output += '<li>';
+        output += 'Question ' + response.question + ': ';
+        output += response.response + ' (correct answer: ' + response.correctAnswer + ')';
+        output += '</li>';
+      });
+      output += '</ul>';
+      output += '<p>Total Correct: ' + totalscore + '</p>';
+      output += '<p>Total Incorrect: ' + totalincorrect + '</p>';
+      output += '<p>Quiz Score: ' + scorePercentage.toFixed(2) + '%</p>';
+
+      document.getElementById('quiz-results').innerHTML = output;
+    });
+  </script>
+</body>
+</html>
